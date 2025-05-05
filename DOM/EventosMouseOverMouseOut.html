@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: purple;
+        }
+        #textoInterativo {
+        border: 5px solid red;
+        width: 100px;
+        height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Projeto</h1>
+
+    <section>
+    <div id="textoInterativo">
+        Passe o Mouse aqui...
+    </div>
+
+    </section>
+
+    <script>
+    const textodaDIV = document.getElementById('textoInterativo')
+    textodaDIV.addEventListener ('mouseover', () => {
+        textodaDIV.textContent = 'O mouse está aqui!'
+        textodaDIV.style.color = 'green'
+
+    })
+
+    textodaDIV.addEventListener ('mouseout', () => {
+        textodaDIV.innerHTML = `<strong> Passe o mouse aqui! </strong>`
+    })
+
+    textodaDIV.addEventListener ('click', () => {
+        textodaDIV.textContent = 'Você clicou!'
+        textodaDIV.style.color = 'yellow'
+    })
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
+    <h1>Loja Online - Compre com desconto</h1>
+</head>
+<body>
+    <p>Digite o valor da compra abaixo para obter o desconto e</p>
+    <p>Clique no botão <strong>calcular</strong> para obter o desconto</p>
+    <p><strong>Digite o valor:</strong></p> <input type="number" name="valor" id="valor">
+                                            <input type="button" value="Calcular" onclick="calcular()">
+                                            <div id="res">Resultado</div>
+                    
+     
+                                            <script>
+                                                function calcular() {
+                                                        let v1 = document.getElementById('valor')
+                                                        let div = document.querySelector('div#res')
+                                                        let n1 = Number(v1.value)
+                                                        let cal = (n1 * 10) / 100
+                                                        let des = n1 - cal 
+                                                        let cal1 = (n1 * 5) / 100
+                                                        let des1 = n1 - cal1
+                                                        if (n1 >= 500) {
+                                                            res.innerHTML = `A compra no valor total de R$ ${n1.toFixed(2).replace('.', ',')} obteve o desconto de 10% que equivale a R$ ${cal.toFixed(2).replace('.', ',')}. O novo valor com desconto agora é R$ ${des.toFixed(2).replace('.', ',')}.`
+                                                            res.innerHTML += ` Obrigado pela sua compra. Volte sempre!`        
+                                                        } else {
+                                                            res.innerHTML = `A compra no valor total de R$ ${n1.toFixed(2).replace('.', ',')} obteve o desconto de 5% que equivale a R$ ${cal1.toFixed(2).replace('.', ',')}. O novo valor com desconto agora é R$ ${des1.toFixed(2).replace(',', '.')}.`
+                                                        }
+                                                                                                 }
+                                            </script>
+</body>
+</html>

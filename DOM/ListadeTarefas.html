@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Elementos</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+    
+    </header>
+
+    <section>
+        <label for="formulariotxt">Digite aqui: </label>
+        <input type="text" name="formulariotxt" id="formulariotxt">
+        <input type="button" value="Adicionar" id="botaotxt">
+        <ul id="listaDeTarefas">Listas de Tarefas:</ul>
+    </section>
+
+    <script>
+        const formulario = document.getElementById('formulariotxt')
+        const botaoEnviar = document.getElementById('botaotxt')
+        const lista = document.getElementById('listaDeTarefas')
+        let arraydeTarefas = []
+
+        botaoEnviar.addEventListener('click', () => {
+            let valorDigitado = formulario.value
+        if (arraydeTarefas.includes(valorDigitado)) {
+            alert('[ERRO!] Valor duplicado!')
+        } else {
+            arraydeTarefas.push(valorDigitado)
+            let novoli = document.createElement('li')
+            lista.appendChild(novoli)
+            novoli.textContent = valorDigitado
+        }
+            })
+        
+        
+    </script>
+</body>
+</html>

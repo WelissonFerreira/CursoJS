@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Idade e Categoria</h1>
+    Digite sua idade: <input type="number" name="id1" id="id1">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res1"><p>Acrescento</p></div>
+    <div id="res"><p>Resultado</p></div>
+
+    <script>
+        function calcular() {
+            let txtid = document.getElementById('id1')
+            let res1 = document.querySelector('div#res1')
+            let res = document.querySelector('div#res')
+            let n1 = Number(txtid.value)
+            
+            if (n1 <= 0) {
+                res1.innerHTML = `Digite um número válido`
+                res.innerHTML = "" // Limpa a area de resultado para evitar exibir "Você é um idoso"
+                return
+            } else {
+                res1.innerHTML = `Você tem ${n1} anos`
+            }
+            
+
+            
+               if(n1 > 0 && n1 <= 12) {
+                res.innerHTML = `Você é uma criança`
+            } else if (n1 > 12 && n1 < 18) {
+                res.innerHTML = `Você é um adolescente`
+            } else if (n1 >= 18 && n1 < 65) {
+                res.innerHTML = `Você é um adulto`
+            }  else {
+                res.innerHTML = `Você é idoso`
+            }
+        }
+    </script>
+</body>
+</html>

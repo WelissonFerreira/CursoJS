@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#minhaDiv {
+color: blue; 
+padding: 10px;
+border: 1px solid red;
+}
+body {
+background-color: red;
+}
+    
+    </style>
+</head>
+<body>
+    <h1>Projeto</h1>
+
+    <section>
+    <div id="minhaDiv">
+        Olá!
+    </div>
+
+    </section>
+
+    <script>
+    const exibirMensagem = document.getElementById('minhaDiv')
+    exibirMensagem.textContent = 'Alterando o texto através do textContent'
+    /* Pode ser usado também inner.HTML:
+exibirMensagem.innerHTML = `<strong>Deixando em negrito.</strong>`
+
+*/   
+    </script>
+</body>
+</html>

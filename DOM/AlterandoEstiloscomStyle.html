@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Projeto</h1>
+
+    <section>
+    <div id="minhaDiv">
+        Olá, Mundo!
+    </div>
+
+    </section>
+
+    <script>
+    const exibirMensagem = document.getElementById('minhaDiv')
+    exibirMensagem.innerHTML = `<strong>Olá, Mundo! Modificado!</strong> <p>Parágrafo</p>`
+    exibirMensagem.style.color =  'green'
+    exibirMensagem.style.border = '2px solid red'
+    
+    </script>
+</body>
+</html>

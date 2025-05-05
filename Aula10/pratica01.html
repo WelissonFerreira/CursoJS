@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+            padding-top: 50px;
+            padding-left: 200px;
+            font: 18px Arial;
+        }
+        h1#sub {
+            padding-top: 100px;
+        }
+
+        h1#mult {
+            padding-top: 100px;
+        }
+
+        h1#divis {
+            padding-top: 100px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <!--Inicio da parte HTML da calculadora de SOMA-->
+    <h1>Calculadora de SOMA</h1>
+    <!--Abaixo temos os três botões, sendo dois Number e um sendo button-->
+    <!--Temos também a Div res, onde é exibido o resultado-->
+    <input type="number" name="botao1" id="botao1"> +
+    <input type="number" name="botao2" id="botao2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <!--Fim da parte HTML da calculadora de SOMA -->
+
+    <!--Inicio da Calculadora de Subtração-->
+    <h1 id="sub">Calculadora de SUBTRAÇÃO: </h1>
+    <input type="number" name="bs1" id="bs1"> -
+    <input type="number" name="bs2" id="bs2">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="res2">Resultado</div>
+    <!--Fim da parte HTML da calculadora de SUBTRAÇÃO -->
+
+    <!--Inicio da Calculadora de Multiplicação-->
+    <h1 id="mult">Calculadora de MULTIPLICAÇÃO:</h1>
+    <input type="number" name="mtt1" id="mtt1"> x
+    <input type="number" name="mtt2" id="mtt2">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="res3">Resultado</div>
+
+     <!--Fim da parte HTML da calculadora de MULTIPLICAÇÃO -->
+
+    <!--Inicio da Calculadora de Multiplicação-->
+    <h1 id="divis">Calculadora de DIVISÃO:</h1>
+    <input type="number" name="divis1" id="divis1">
+    <input type="number" name="divis2" id="divis2">
+    <input type="button" value="Dividir" onclick="divisao()">
+    <div id="res4">Resultado</div>
+
+    <!--Fim da parte HTML da calculadora de MULTIPLICAÇÃO -->
+    
+    <script>
+        function somar() {
+            let b1 = document.getElementById('botao1')
+            let b2 = document.getElementById('botao2')
+            let res = document.querySelector('div#res')
+            let n1 = Number(b1.value)
+            let n2 = Number(b2.value)
+            let s = n1 + n2
+            res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+        
+        function subtrair() {
+            let bs1 = document.getElementById('bs1')
+            let bs2 = document.getElementById('bs2')
+            let res2 = document.querySelector('div#res2')
+            let bn1 = Number(bs1.value)
+            let bn2 = Number(bs2.value)
+            let s1 = bn1 - bn2
+            res2.innerHTML = `A subtração de ${bn1} e ${bn2} é igual a ${s1}`
+        }
+
+        function multiplicar() {
+            let mt1 = document.getElementById('mtt1')
+            let mt2 = document.getElementById('mtt2')
+            let res3 = document.querySelector('div#res3')
+
+            let mn1 = Number(mt1.value)
+            let mn2 = Number(mt2.value)
+            let s2 = mn1 * mn2
+            res3.innerHTML = `A multiplicação de ${mn1} e ${mn2} é igual a ${s2}`
+        }
+
+        function divisao() {
+            let divs1 = document.getElementById('divis1')
+            let divs2 = document.getElementsByTagName('divis2')
+            let res4 = document.querySelector('div#res4')
+            let nd1 = Number(divs1.value)
+            let nd2 = Number(divs2.value)
+            let s3 = nd1 / nd2
+            res4.innerText = `O resultado da divisão de ${nd1} dividido por ${nd2} é igual a ${s3}`    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA 4 & MEDIA</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font: 18px Arial;
+
+        }
+        input {
+            width: 50px;
+        }
+
+        input#soma1 {
+            width: 65px;
+        }
+
+        input#media {
+            width: 65px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SOMA 4 e MÉDIA:</h1>
+    <input type="number" name="bot1" id="bot1"> +
+    <input type="number" name="bot2" id="bot2"> +
+    <input type="number" name="bot3" id="bot3"> +
+    <input type="number" name="bot4" id="bot4"> 
+    <input id="soma1" type="button" value="SOMAR" onclick="somar()">
+    <input id="media" type="button" value="MÉDIA" onclick="media()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            let b1 = document.getElementById('bot1')
+            let b2 = document.getElementById('bot2')
+            let b3 = document.getElementById('bot3')
+            let b4 = document.getElementById('bot4')
+            let res = document.querySelector('div#res')
+
+            let n1 = Number(b1.value)
+            let n2 = Number(b2.value)
+            let n3 = Number(b3.value)
+            let n4 = Number(b4.value)
+
+            let s = n1 + n2 + n3 + n4
+
+            res.innerText = `O resultado da soma entre os números ${n1} + ${n2} + ${n3} + ${n4} é igual a ${s}`
+        }
+
+        function media() {
+            let b1 = document.getElementById('bot1')
+            let b2 = document.getElementById('bot2')
+            let b3 = document.getElementById('bot3')
+            let b4 = document.getElementById('bot4')
+            let res = document.querySelector('div#res')
+
+            let n1 = Number(b1.value)
+            let n2 = Number(b2.value)
+            let n3 = Number(b3.value)
+            let n4 = Number(b4.value)
+
+            let s = n1 + n2 + n3 + n4
+            let m = (n1 + n2 + n3 + n4) / 4
+            res.innerText = `A média da soma dos números ${n1}, ${n2}, ${n3}, ${n4} que resulta em ${s} tem média de ${m}`
+        }
+    </script>
+</body>
+</html>

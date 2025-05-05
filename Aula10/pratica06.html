@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Loja</title>
+    <style>
+        nav {
+            
+            font: 20px Arial;
+        }
+
+        ul#m3 {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            border: 2x px solid gray;
+            background-color: rgb(243, 184, 111);
+        }
+        div#cont {
+            font: 20px Arial;
+            width: 300px;
+            height: 150px;
+            padding: 100px;
+            border: 4px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Loja Online - Teste</h1>
+    <nav>
+        <ul id="m3">
+            <li><a href="home">Home</a></li>
+            <li><a href="contato">Contato</a></li>
+            <li id="l1" onclick="botao()"><a id="link1" href="javascript:void(0)">Mostrar roupas</a></li>
+        </ul>
+    </nav>
+    <div id="cont">Aqui vai aparecer o conteúdo</div>
+
+    <script>
+        function botao() {
+            let li = document.querySelector('a#link1')
+            let div = document.querySelector('div#cont')
+            let calca = 'Calça Social Masculina R$ 150,00'
+            let camisa = ' | Camisa Polo Wear Masculina R$ 150,00 á vista'
+            let camisa2 = ' | Camisa Social Masculina R$ 200,00 á vista'
+            let sapato = ' | Sapato Social Masculino R$ 200,00'
+            
+            div.innerText = `${calca} ${camisa} ${camisa2} ${sapato}`
+        }
+    </script>
+</body>
+</html>

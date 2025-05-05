@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculandoIMC</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    Peso: <input type="number" name="peso1" id="peso1">
+    Altura: <input type="number" name="altura1" id="altura1">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"><p>Resultado</p></div>
+    <div id="res1"></div>
+
+    <script>
+        
+        function calcular() {
+        let peso = document.getElementById('peso1')
+        let altura = document.getElementById('altura1')
+        let res = document.querySelector('div#res')
+        let res1 = document.querySelector('div#res1')
+
+        let convpeso = Number(peso1.value)
+        let convaltura = Number(altura1.value)
+
+        res.innerHTML = `Sua peso é ${convpeso.toFixed(2).replace(',', '.')}kg `
+        res.innerHTML += `| Sua altura é ${convaltura.toFixed(2).replace(',', '.')}`
+        calimc = convpeso / (convaltura * convaltura)
+        res.innerHTML += ` | Seu IMC é ${calimc.toFixed(2).replace(',', '.')}`
+       
+        if (calimc < 18.5) {
+            res1.innerHTML = `<p>Você está <strong>Abaixo do peso</strong></p>`
+        } else if (calimc >= 18.5 && calimc <= 24.9) {
+            res1.innerHTML = `<p>Você está no <strong>Peso ideal</strong></p>`
+        } else if (calimc >= 25 && calimc <= 29.9) {
+            res1.innerHTML = `<p>Você está com <strong>Sobre peso</strong></p>`
+        } else if (calimc >= 30 && calimc <= 34.9) {
+            res1.innerHTML = `<p>Você está com <strong>Obesidade grau 1</strong></p>`
+        } else if (calimc >= 35 && calimc <= 39.9) {
+            res1.innerHTML = `<p>Você está com <strong>Obesidade grau 2</strong></p>`
+        } else {
+            res1.innerHTML = `<p>Você está com <strong>Obesidade grau 3(mórbida)</strong></p>`
+        }
+        
+    }
+        
+    </script>
+</body>
+</html>

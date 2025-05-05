@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação</title>
+    <style>
+        body {
+            font: 18px Arial;
+            background-color: rgb(85, 233, 233);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Multiplicação: </h1>
+    <input type="number" name="botao1" id="botao1">
+    <input type="number" name="botao2" id="botao2">
+    <input type="button" value="MULTIPLICAR" onclick="multiplicar()">
+    <input id="zero" type="button" value="ZERAR" onclick="zerar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function multiplicar() {
+            let bt1 = document.getElementById('botao1')
+            let bt2 = document.querySelector('input#botao2')
+            let res = document.querySelector('div#res')
+            let n1 = Number(bt1.value)
+            let n2 = Number(bt2.value)
+            let s = n1 * n2
+            res.innerText = `A multiplicação entre ${n1} e ${n2} resulta em ${s}`
+        }
+        
+        function zerar() {
+            let btt1 = document.getElementById('botao1')
+            let btt2 = document.getElementById('botao2')
+            let res1 = document.querySelector('input#zero')
+            btt1.value = ""
+            btt2.value = ""
+            res.innerText = "Resultado"
+            
+        }
+    </script>
+</body>
+</html>

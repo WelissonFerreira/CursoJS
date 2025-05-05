@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: aqua;
+            padding-left: 200px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    E-mail: <input type="text" name="txt1" id="txt1">
+    Senha: <input type="text" name="txt2" id="txt2">
+            <input type="button" value="Login" onclick="logar()">
+    <a href="Cadastrar">Cadastre-se</a>
+    <a href=""><p>Recuperar senha</p></a>
+    <div id="res"><p>Digite seu e-mail e senha para realizar o login.</p></div>
+
+    <script>
+        function logar() {
+            let tx1 = document.getElementById('txt1').value
+            let tx2 = document.getElementById('txt2').value
+            let res = document.querySelector('div#res')
+
+            if (tx1 === 'admin' && tx2 === '1234') {
+                res.innerHTML = `Login efetuado com sucesso!`
+            } else {
+                res.innerHTML = 'Os dados digitados estão incorretos!'
+            }
+
+        }
+    </script>
+</body>
+</html>

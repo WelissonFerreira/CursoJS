@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OndeMora</title>
+</head>
+<body>
+    <h1>Em qual país você mora?</h1>
+    <input type="text" name="ovcm" id="ovcm">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function verificar() {
+            let pais = document.getElementById('ovcm').value
+            let res = document.querySelector('div#res')
+
+            if (pais.toLowerCase() === "brasil") {
+                res.innerHTML = 'Você é brasileiro!'
+            } else {
+                res.innerHTML = 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>

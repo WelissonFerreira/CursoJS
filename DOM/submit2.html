@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit2</title>
+</head>
+<body>
+    <header>
+        <h1>Submit com Manipulação</h1>
+        <h2>CriandoElementos</h2>
+    </header>
+    
+    <section>
+        <form id="meuFormulario">
+        <label for="nome">Digite seu nome: </label>
+        <input type="text" name="nome" id="nometxt">
+        <select name="cores" id="Cores">
+            <option value="selecionar">Selecione uma cor</option>
+            <option value="azul">Azul</option>
+            <option value="vermelho">Vermelho</option>
+            <option value="verde">Verde</option>
+            <option value="amarelo">Amarelo</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <p id="resultado"></p>
+        </form>
+
+    </section>
+
+    <script>
+        const formulario = document.getElementById('meuFormulario')
+        const nomeDigitado = document.getElementById('nometxt')
+        const seletorCores = document.getElementById('Cores')
+        const res = document.getElementById('resultado')
+
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+        let CorEscolhida = seletorCores.value
+        let nomeEscolhido = nomeDigitado.value
+        
+            
+
+        if (nomeEscolhido === 'coresExtras') {
+        let novoOption = document.createElement('option')
+        novoOption.value = 'magenta'
+        novoOption.textContent = 'Magenta'
+        let novoOption2 = document.createElement('option')
+            novoOption2.value = 'ciano'
+            novoOption2.textContent = 'Ciano'
+
+            seletorCores.appendChild(novoOption)
+            seletorCores.appendChild(novoOption2)
+        res.textContent = `Novas cores foram adicionadas!`
+        
+        } else {
+            res.textContent = `Olá ${nomeEscolhido}! A cor selecionada foi ${CorEscolhida}!`
+        }
+
+        
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>

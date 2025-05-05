@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobro e Triplo</title>
+</head>
+<body>
+    <h1>Calculadora Dobro e Triplo:</h1>
+    <input type="number" name="dobetrip" id="dobetrip">
+    <input type="button" value="DOBRO" onclick="dobro()">
+    <input type="button" value="TRIPLO" onclick="triplo()">
+    <input type="button" value="ZERAR" onclick="zerar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function dobro() {
+            let db1 = document.getElementById('dobetrip')
+            let res = document.querySelector('div#res')
+            let n1 = Number(db1.value)
+            let dob = n1 * 2
+            res.innerText = `O resultado do dobro de ${n1} é ${dob}`
+
+        }
+
+        function triplo() {
+            let tp1 = document.getElementById('dobetrip')
+            let res = document.querySelector('div#res')
+            let n2 = Number(tp1.value)
+            let trip = n2 * 3
+            res.innerText = `O resultado do triplo de ${n2} é igual a ${trip}`
+        }
+
+        function zerar() {
+            let z1 = document.getElementById('dobetrip')
+            z1.value="" // Limpa o resultado
+            res.innerText = "Resultado"
+        }
+    </script>
+</body>
+</html>

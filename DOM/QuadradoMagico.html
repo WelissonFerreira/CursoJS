@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #quadradoMagico {
+        background-color: lightblue;
+        border: 5px solid red;
+        width: 100px;
+        height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Projeto</h1>
+
+    <section>
+    <div id="quadradoMagico">
+        
+    </div>
+
+    </section>
+
+    <script>
+    let quadradoMagico = document.getElementById('quadradoMagico')
+    let corAtual = 'lightblue';
+    quadradoMagico.addEventListener('click', () => {
+        if (corAtual === 'lightblue') {
+        quadradoMagico.style.backgroundColor = 'lightcoral'
+        corAtual = 'lightcoral'
+        } else {
+        quadradoMagico.style.backgroundColor = 'lightblue'
+        corAtual = 'lightblue'
+        }
+    })
+
+    </script>
+</body>
+</html>

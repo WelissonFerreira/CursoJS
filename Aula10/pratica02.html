@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma com 3 Números</title>
+    <style>
+        body {
+            background-color: aqua;
+            font: 18px Arial;
+        }
+        input {
+            width: 50px;
+        }
+
+        input#botaob {
+            width: 65px;
+        }
+
+        div#res {
+            font: 25px Sans-serif;
+            padding-top: 20px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora de Soma com 3 Números: </h1>
+    <input type="number" name="botao1" id="botao1"> +
+    <input type="number" name="botao2" id="botao2"> +
+    <input type="number" name="botao3" id="botao3"> 
+    <input id="botaob" type="button" value="SOMAR" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            let bt1 = document.getElementById('botao1')
+            let bt2 = document.getElementById('botao2')
+            let bt3 = document.querySelector('input#botao3')
+            let res = document.querySelector('div#res')
+            let n1 = Number(bt1.value)
+            let n2 = Number(bt2.value)
+            let n3 = Number(bt3.value)
+            let s = n1 + n2 + n3
+            res.innerText = `A soma entre ${n1}, ${n2} e ${n3} resulta em ${s}`
+        }
+
+    </script>
+</body>
+</html>

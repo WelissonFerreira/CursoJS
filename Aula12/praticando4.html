@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de números</h1>
+    Digite um número: <input type="number" name="txn1" id="txn1">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"><p>Resultado</p></div>
+
+    <script>
+        function verificar() {
+            let tx1 = document.getElementById('txn1')
+            let res = document.querySelector('div#res')
+            let n1 = Number(tx1.value)
+            if (n1 < 0) {
+                res.innerHTML = `O número ${n1} é negativo`
+            } else if (n1 === 0) {
+                res.innerHTML = `O número ${n1} é Zero`
+            } else {
+                res.innerHTML = `O número ${n1} é positivo`
+            }
+        }
+    </script>
+</body>
+</html> 

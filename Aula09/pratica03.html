@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: arial 35px grey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.alert('Bem-Vindo á sua loja online preferida de produtos de tecnologia com descontos exclusivos!!')
+        let produto = window.prompt('Digite o produto: ')
+        window.alert('Para ter o desconto que deseja, é necessário informar o valor total do produto e a porcentagem (%) da promoção')
+        let preco = Number.parseFloat(window.prompt('Qual valor do produto?'))
+        let desconto = Number.parseInt(window.prompt('Qual o desconto? (%) '))
+        let calc = preco * desconto / 100
+        let novovalor = preco - calc
+
+        document.write(`O produto ${produto} com o valor original de R$ ${preco.toFixed(2)} com o desconto de ${desconto}% agora passa a ser R$ ${novovalor.toFixed(2)}`)
+    </script>
+</body>
+</html>

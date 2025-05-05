@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #textoInterativo {
+        border: 5px solid red;
+        width: 100px;
+        height: 100px;
+        }
+        body {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- Podemos usar o this, o this é um tanto dinâmica
+    e seu valor depende de como a função é chamada.
+    Em termos simples, this geralmente se refere ao objeto
+    "dono" do código que está sendo executado. 
+    No entanto, o "dono" pode mudar dependendo do contexto. -->
+    <!-- Usando o  this: -->
+    <h1>Projeto</h1>
+
+    <section>
+<div id="textoInterativo">
+        Passe o Mouse aqui...
+    </div>
+
+    </section>
+
+    <script>
+    const textodaDIV = document.getElementById('textoInterativo')
+
+    textodaDIV.addEventListener ('mouseover', function() {
+        this.textContent = 'O mouse está aqui!'
+        this.style.color = 'green'
+
+    })
+
+    textodaDIV.addEventListener ('mouseout', function() {
+        this.innerHTML = `<strong> Passe o mouse aqui! </strong>`
+    })
+
+    textodaDIV.addEventListener ('click', function() {
+        this.textContent = 'Você clicou!'
+        this.style.color = 'yellow'
+    })
+
+    
+    </script>
+</body>
+</html>

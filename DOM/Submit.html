@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Botão Submit</h1>
+    </header>
+
+    <section>
+        <div>
+        <form id="meuFormulario">
+        <label for="nome">Digite seu nome: </label>
+        <input type="text" name="nome" id="txtNome">
+        <br> <br>
+        <label for="cores">Escolha uma cor: </label>
+        <select name="corSelecionada" id="cores">
+            <option value="vermelho">Vermelho</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="amarelo">Amarelo</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <p id="resultado"></p>
+        </form>  
+        </div>
+    </section>
+
+    <script>
+        const formulario = document.getElementById('meuFormulario')
+        const seletorCores = document.getElementById('cores')
+        const resultadoDiv = document.getElementById('resultado')
+        const nomeDigitado = document.getElementById('txtNome')
+
+        formulario.addEventListener('submit', function(event) {
+            // 1. Impedir o comportamento padrão de envio do formulário
+            event.preventDefault();
+
+            // 2. Obter o valor da opção selecionada no dropdown
+            const corSelecionada = seletorCores.value
+
+            // 3. Pegar o nome digitado.
+            const Nome = nomeDigitado.value
+
+            // 4. Mostrar resultado do nome e cor selecionada
+
+                resultadoDiv.textContent = `Olá ${Nome}! Você selecionou a cor: ${corSelecionada}`
+        
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

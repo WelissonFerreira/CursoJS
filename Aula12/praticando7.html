@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaEscolar</title>
+    <style>
+        body {
+            background-color: rgb(22, 22, 223);
+        }
+    </style>
+</head>
+<body>
+    <h1>Média Escolar</h1>
+    Digite a primeira nota: <input type="number" name="nota1" id="nota1">
+    <p></p>Digite a segunda nota: <input type="number" name="nota2" id="nota2">
+    <p><input type="button" value="Verificar" onclick="media()"></p>
+    <div id="res"><p>Resultado</p></div>
+    <p><div id="res1">Acrescento</div></p>
+
+    <script>
+        
+
+        function media() {
+            let not1 = document.getElementById('nota1')
+            let not2 = document.getElementById('nota2')
+            res = document.querySelector('div#res')
+            res1 = document.querySelector('div#res1')
+            let n1 = Number(not1.value)
+            let n2 = Number(not2.value)
+            mediaS = (n1 + n2) / 2
+
+            if (mediaS <= 0) {
+                res1.innerHTML = `Número inválido`
+                res.innerHTML += ""
+                return
+            } else if (mediaS >= 7) {
+                res.innerHTML = `Sua média foi ${mediaS}. APROVADO!`
+                res1.innerHTML = `Parabéns!`
+            } else if (mediaS >= 5 && mediaS < 7) {
+                res.innerHTML = `Sua média foi ${mediaS}. RECUPERAÇÃO`
+                res1.innerHTML = `Continue em busca da aprovação!`
+            } else {
+                res.innerHTML = `Sua média foi ${mediaS}. REPROVADO`
+                res1.innerHTML = `Estude mais!`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circuloMutante {
+        background-color: yellow;
+        border-radius: 50%;
+        border: 2px solid orange;
+        width: 100px;
+        height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Curculo Mutante</h1>
+
+    <section>
+    <div id="circuloMutante">
+        
+    </div>
+
+    </section>
+    
+    <script>
+    let corAtual = 'yellow'
+    let circuloMutante = document.getElementById('circuloMutante')
+    circuloMutante.addEventListener('click', () => {
+    if (corAtual === 'yellow') {
+        circuloMutante.style.backgroundColor = 'purple';
+        circuloMutante.style.borderColor = 'indigo';
+        corAtual = 'purple';
+        
+    } else {
+        circuloMutante.style.backgroundColor = 'yellow';
+        circuloMutante.style.borderColor = 'orange';
+        corAtual = 'yellow';
+        
+    }
+    
+
+    })
+
+    </script>
+</body>
+</html>

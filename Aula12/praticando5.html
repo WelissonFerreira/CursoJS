@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF</title>
+    <style>
+        body {
+            background-color: rgba(165, 42, 42, 0.568);
+        }
+    </style>
+</head>
+<body>
+    <h1>Converter de Celsius para Fahrenheit</h1>
+    Digite o valor em Celsius°: <input type="number" name="cf1" id="cf1">
+    <input type="button" value="Converter" onclick="converter()">
+    <div id="res1"><p>Acrescento</p></div>
+    <div id="res"><p>Resultado</p></div>
+
+    <script>
+        function converter() {
+            let conv = document.getElementById('cf1')
+            let res = document.querySelector('div#res')
+            let n1 = Number(conv.value)
+            let form = (n1 * 9 / 5) + 32
+            res1.innerHTML = `A temperatura atual em celsius é de ${n1}°C | `
+            res1.innerHTML += `A temperatura em Fahrenheit é de ${form}°F`
+            if (form < 0) {
+                res.innerHTML = `A temperatura está abaixo de zero`
+            } else if (form >= 0 && form <= 30 ) {
+                res.innerHTML = `A temperatura está entre 0°C e 30°C`
+            } else {
+                res.innerHTML = `A temperatura está acima de 30°C`
+            }
+        }
+    </script>
+</body>
+</html>

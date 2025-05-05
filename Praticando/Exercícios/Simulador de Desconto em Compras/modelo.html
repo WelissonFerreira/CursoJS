@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>DESCONTOS EM COMPRAS</h1>
+        
+    </header>
+
+    <section>
+        <div id="rescond">
+            Clique aqui para promoções: <input type="button" value="Promoções" onclick="promocao()">
+            <p></p>
+        </div>
+        <div>
+            
+            Valor da Compra: <input type="number" name="valcompra" id="valcompra">
+            <p></p>Quantidade de itens: <input type="number" name="qitens" id="qitens">
+                    <p></p><label for="marcadorvip">Clube VIP?</label> <input type="checkbox" name="vip" id="vip">
+                    <p></p><label for="marcadorpromo">Hoje é dia de Promoção? </label><input type="checkbox" name="promo" id="promo">
+                                        <p></p><input type="button" value="Enviar" onclick="enviar()">
+        </div>
+
+        <div id="res">
+            <p>Verificando...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Welisson Ferreira</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
